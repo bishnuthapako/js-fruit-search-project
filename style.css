@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+}
+
+:focus {
+ /* TODO */
+}
+
+
+body {
+  /* TODO */
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  margin-top: 30vh;;;
+  /* align-items: center; */
+  background-image: linear-gradient( to right, rgb(51, 4, 220), rgb(73, 41, 234));
+}
+
+input {
+ /* TODO */
+ 
+}
+
+.search-container {
+ /* TODO */
+width: 50%;
+height: auto;
+display: flex;
+flex-direction: column;
+align-items: center;
+overflow: hidden;
+}
+.search-container input,
+.search-container .suggestions {
+  /* TODO */
+  /* background-image: linear-gradient( to right, rgb(117, 93, 236), rgb(92, 60, 211)); */
+  /* background-image: linear-gradient( to right, rgb(51, 4, 220), rgb(73, 41, 234)); */
+}
+.search-container input {
+ /* TODO */
+ width: 50%;
+ height: 40px;
+ padding: 8px;
+ margin-top: 8px;
+ font-size: 20px;
+ border-radius: 5px;
+ position: relative;
+ color:rgb(23, 4, 238);
+ font-family: Regular 400;
+
+}
+
+.search-container button{
+  height: 37px;
+  padding: 8px;
+  margin-top: 9px;
+  right: 38%;;
+  border: none;
+  border-radius: 15px;
+  width: 4%;
+  position: absolute;
+  cursor: pointer;
+
+
+}
+input::placeholder {
+  color: rgb(93, 8, 222);
+  opacity: 0.8; 
+}
+
+.search-container .suggestions {
+   /* TODO */
+   width: 50%;
+   height: auto;
+   /* margin-top: 4px; */
+   border-radius: 5px;
+
+}
+
+ul {
+  /* TODO */
+  list-style: none;
+  padding: 0;
+  /* margin: 0 40px; */
+  background-color: rgb(111, 12, 241);
+  width: 100%;
+  height: auto;
+  border-radius: 3px;
+  margin-top: 1px;
+ 
+}
+ul.has-suggestions {
+  /* TODO */
+}
+ul li {
+  /* TODO */
+  text-align: left;
+  padding: 5px 0; 
+  font-weight: bold;
+  color:antiquewhite;
+  padding: 10px 20px;
+
+}
+ul li:hover {
+  /* TODO */
+  /* background-image: linear-gradient( to right, rgb(159, 158, 164), rgb(202, 201, 206)); */
+  border-radius: 5px;
+  padding: 10px;
+  opacity: 1;
+  cursor: pointer;
+  background-color: aliceblue;
+  color:rgb(110,12,241);
+}
+
+input {
+   /* TODO */
+}
