@@ -41,10 +41,11 @@ function showSuggestions(results, inputVal) {
 
 function useSuggestion(e) {
 	// TODO
-	console.log(e, 'use')
+	// console.log(e, 'use')
 	const inputVal = (e.target.textContent);
-	console.log(inputVal, 'inputVal')
+	// console.log(inputVal, 'inputVal')
 	input.value = inputVal;
+	suggestions.innerHTML = "";
 }
 
 input.addEventListener('keyup', searchHandler);
