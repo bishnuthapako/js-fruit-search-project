@@ -47,7 +47,7 @@ overflow: hidden;
  font-size: 20px;
  border-radius: 5px;
  position: relative;
- color:rgb(23, 4, 238);
+ color:rgb(111, 12, 241);
  font-family: Regular 400;
 
 }
@@ -66,8 +66,8 @@ overflow: hidden;
 
 }
 input::placeholder {
-  color: rgb(93, 8, 222);
-  opacity: 0.8; 
+  color: rgb(127, 58, 231);
+  opacity: 0.5; 
 }
 
 .search-container .suggestions {
