@@ -31,6 +31,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 overflow: hidden;
+
 }
 .search-container input,
 .search-container .suggestions {
@@ -41,54 +42,40 @@ overflow: hidden;
 .search-container input {
  /* TODO */
  width: 50%;
- height: 40px;
+ height: auto;
  padding: 8px;
  margin-top: 8px;
  font-size: 20px;
  border-radius: 5px;
- position: relative;
- color:rgb(111, 12, 241);
- font-family: Regular 400;
-
+ color:rgb(23, 4, 238);
+ border: none;
 }
 
-.search-container button{
-  height: 37px;
-  padding: 8px;
-  margin-top: 9px;
-  right: 38%;;
-  border: none;
-  border-radius: 15px;
-  width: 4%;
-  position: absolute;
-  cursor: pointer;
 
-
-}
-input::placeholder {
-  color: rgb(127, 58, 231);
-  opacity: 0.5; 
-}
 
 .search-container .suggestions {
    /* TODO */
    width: 50%;
    height: auto;
-   /* margin-top: 4px; */
-   border-radius: 5px;
 
+}
+
+::placeholder{
+  padding: 0px 15px 0px;
+  color: rgb(127, 58, 231);
+  opacity: 0.5; 
 }
 
 ul {
   /* TODO */
   list-style: none;
   padding: 0;
-  /* margin: 0 40px; */
+  border-top: white;
   background-color: rgb(111, 12, 241);
   width: 100%;
   height: auto;
   border-radius: 3px;
-  margin-top: 1px;
+  margin-top: 5px;
  
 }
 ul.has-suggestions {
@@ -105,7 +92,6 @@ ul li {
 }
 ul li:hover {
   /* TODO */
-  /* background-image: linear-gradient( to right, rgb(159, 158, 164), rgb(202, 201, 206)); */
   border-radius: 5px;
   padding: 10px;
   opacity: 1;
