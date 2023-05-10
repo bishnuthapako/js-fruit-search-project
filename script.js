@@ -1,9 +1,6 @@
 
-const input = document.getElementById("fruit")
+const searchBar = document.getElementById("fruit")
 const suggestions = document.querySelector('.suggestions ul');
-
-
-
 const fruit = ['Apple', 'Apricot', 'Avocado 🥑', 'Banana', 'Bilberry', 'Blackberry', 'Blackcurrant', 'Blueberry', 'Boysenberry', 'Currant', 'Cherry', 'Coconut', 'Cranberry', 'Cucumber', 'Custard apple', 'Damson', 'Date', 'Dragonfruit', 'Durian', 'Elderberry', 'Feijoa', 'Fig', 'Gooseberry', 'Grape', 'Raisin', 'Grapefruit', 'Guava', 'Honeyberry', 'Huckleberry', 'Jabuticaba', 'Jackfruit', 'Jambul', 'Juniper berry', 'Kiwifruit', 'Kumquat', 'Lemon', 'Lime', 'Loquat', 'Longan', 'Lychee', 'Mango', 'Mangosteen', 'Marionberry', 'Melon', 'Cantaloupe', 'Honeydew', 'Watermelon', 'Miracle fruit', 'Mulberry', 'Nectarine', 'Nance', 'Olive', 'Orange', 'Clementine', 'Mandarine', 'Tangerine', 'Papaya', 'Passionfruit', 'Peach', 'Pear', 'Persimmon', 'Plantain', 'Plum', 'Pineapple', 'Pomegranate', 'Pomelo', 'Quince', 'Raspberry', 'Salmonberry', 'Rambutan', 'Redcurrant', 'Salak', 'Satsuma', 'Soursop', 'Star fruit', 'Strawberry', 'Tamarillo', 'Tamarind', 'Yuzu'];
 
 function search(str) {
@@ -34,18 +31,16 @@ function showSuggestions(results, inputVal) {
 }
 
 function useSuggestion(e) {
-	const inputVal = (e.target.textContent);
-	input.value = inputVal;
+	searchBar.value = e.target.textContent;
 	suggestions.innerHTML = "";
 }
 
 // Hide suggestions when clicking outside the search bar
 document.addEventListener("click", (event)=>{
-	if(!input.contains(event.target)){
+	if(!searchBar.contains(event.target)){
 		suggestions.innerHTML = ''
 	}
-})
+});
 
-
-input.addEventListener("keydown", searchHandler)
+searchBar.addEventListener("keydown", searchHandler)
 suggestions.addEventListener('click', useSuggestion);
