@@ -1,9 +1,8 @@
-const input = document.querySelector('#fruit');
-const searchBtn = document.querySelector('#search');
 
-
+const input = document.getElementById("fruit")
 const suggestions = document.querySelector('.suggestions ul');
-// console.log(suggestions, 'sugg')
+
+
 
 const fruit = ['Apple', 'Apricot', 'Avocado 🥑', 'Banana', 'Bilberry', 'Blackberry', 'Blackcurrant', 'Blueberry', 'Boysenberry', 'Currant', 'Cherry', 'Coconut', 'Cranberry', 'Cucumber', 'Custard apple', 'Damson', 'Date', 'Dragonfruit', 'Durian', 'Elderberry', 'Feijoa', 'Fig', 'Gooseberry', 'Grape', 'Raisin', 'Grapefruit', 'Guava', 'Honeyberry', 'Huckleberry', 'Jabuticaba', 'Jackfruit', 'Jambul', 'Juniper berry', 'Kiwifruit', 'Kumquat', 'Lemon', 'Lime', 'Loquat', 'Longan', 'Lychee', 'Mango', 'Mangosteen', 'Marionberry', 'Melon', 'Cantaloupe', 'Honeydew', 'Watermelon', 'Miracle fruit', 'Mulberry', 'Nectarine', 'Nance', 'Olive', 'Orange', 'Clementine', 'Mandarine', 'Tangerine', 'Papaya', 'Passionfruit', 'Peach', 'Pear', 'Persimmon', 'Plantain', 'Plum', 'Pineapple', 'Pomegranate', 'Pomelo', 'Quince', 'Raspberry', 'Salmonberry', 'Rambutan', 'Redcurrant', 'Salak', 'Satsuma', 'Soursop', 'Star fruit', 'Strawberry', 'Tamarillo', 'Tamarind', 'Yuzu'];
 
@@ -14,18 +13,12 @@ function search(str) {
 	let results = [];
 	results = fruit.filter((fruitItem)=> fruitItem.toLocaleLowerCase().includes(str.toLocaleLowerCase()))
 	return results;
-
-	// TODO
 }
 
 function searchHandler(e) {
-	// console.log(e, 'e')
 	const inputValue = e.target.value;
-	// console.log(inputValue, 'value')
 	const results = search(inputValue);
-	// console.log(results, 'results')
 	showSuggestions(results, inputValue)
-	// TODO
 }
 
 function showSuggestions(results, inputVal) {
@@ -37,35 +30,22 @@ function showSuggestions(results, inputVal) {
 			suggestions.appendChild(newLi)
 		});
 	}
-	// TODO
 
 }
 
 function useSuggestion(e) {
-	// TODO
-	// console.log(e, 'use')
 	const inputVal = (e.target.textContent);
-	// console.log(inputVal, 'inputVal')
 	input.value = inputVal;
 	suggestions.innerHTML = "";
 }
 
-// function searchHandler2(e) {
-// 	// console.log(e, 'e')
-// 	const inputValue = input.value;
-// 	// console.log(inputValue, 'value')
-// 	const results = search(inputValue);
-// 	// console.log(results, 'results')
-// 	showSuggestions(results, inputValue)
-// 	// TODO
-// }
-
-// input.addEventListener('keyup', searchHandler); // Auto Suggestion
-input.addEventListener('keydown', function(e) { // Enter key eventListerner
-	if(e.keyCode == 13){
-		searchHandler(e);
-	  }
+// Hide suggestions when clicking outside the search bar
+document.addEventListener("click", (event)=>{
+	if(!input.contains(event.target)){
+		suggestions.innerHTML = ''
+	}
 })
-// searchBtn.addEventListener('click', searchHandler2);
-input.addEventListener('keyup', searchHandler)
+
+
+input.addEventListener("keydown", searchHandler)
 suggestions.addEventListener('click', useSuggestion);
