@@ -9,7 +9,7 @@ The goal of this project is to develop a small-scale search bar that suggests va
 
 When a user types input that matches any part of a fruit's name in the provided list, a dropdown menu will appear containing all the matching fruits. As the user continues to type, the dropdown menu will update to show relevant suggestions. When a user clicks on one of the options, it will populate the search bar.
 
-## Features
+## Resources
 ### Autofill:
  As the user types, the search bar will display a list of fruit suggestions based on the input. The suggestions will update dynamically as the user types.
 Dropdown Menu: The search bar will include a dropdown menu containing the list of matching fruits. When a user clicks on a suggestion, it will populate the search bar.
