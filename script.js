@@ -1,4 +1,6 @@
 const input = document.querySelector('#fruit');
+const searchBtn = document.querySelector('#search');
+
 
 const suggestions = document.querySelector('.suggestions ul');
 // console.log(suggestions, 'sugg')
@@ -48,5 +50,22 @@ function useSuggestion(e) {
 	suggestions.innerHTML = "";
 }
 
-input.addEventListener('keyup', searchHandler);
+// function searchHandler2(e) {
+// 	// console.log(e, 'e')
+// 	const inputValue = input.value;
+// 	// console.log(inputValue, 'value')
+// 	const results = search(inputValue);
+// 	// console.log(results, 'results')
+// 	showSuggestions(results, inputValue)
+// 	// TODO
+// }
+
+// input.addEventListener('keyup', searchHandler); // Auto Suggestion
+input.addEventListener('keydown', function(e) { // Enter key eventListerner
+	if(e.keyCode == 13){
+		searchHandler(e);
+	  }
+})
+// searchBtn.addEventListener('click', searchHandler2);
+input.addEventListener('keyup', searchHandler)
 suggestions.addEventListener('click', useSuggestion);
