@@ -13,9 +13,14 @@ body {
   height: 100vh;
   display: flex;
   justify-content: center;
-  margin-top: 30vh;;;
+  margin-top: 30vh;
+  background-image: url('https://source.unsplash.com/random/?blog/');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
   /* align-items: center; */
-  background-image: linear-gradient( to right, rgb(51, 4, 220), rgb(73, 41, 234));
+  /* background-image: linear-gradient( to right, rgb(51, 4, 220), rgb(73, 41, 234)); */
 }
 
 input {
