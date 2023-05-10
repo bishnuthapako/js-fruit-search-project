@@ -10,10 +10,10 @@
 body {
   /* TODO */
   width: 100%;
-  height: 100vh;
+  height: auto;
   display: flex;
   justify-content: center;
-  margin-top: 30vh;
+  margin-top: 15vh;
   background-image: url('https://source.unsplash.com/random/?blog/');
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -52,14 +52,15 @@ overflow: hidden;
  margin-top: 8px;
  font-size: 20px;
  border-radius: 5px;
- color:rgb(23, 4, 238);
+ color:rgb(48, 31, 239);
  border: none;
+ background-color: transparent;
+ border: 1px solid white;
 }
 
 
 
 .search-container .suggestions {
-   /* TODO */
    width: 50%;
    height: auto;
 
@@ -68,15 +69,14 @@ overflow: hidden;
 ::placeholder{
   padding: 0px 15px 0px;
   color: rgb(127, 58, 231);
-  opacity: 0.5; 
+  opacity: 0.7; 
 }
 
 ul {
-  /* TODO */
   list-style: none;
   padding: 0;
   border-top: white;
-  background-color: rgb(111, 12, 241);
+  background-color: rgb(178, 175, 182);
   width: 100%;
   height: auto;
   border-radius: 3px;
@@ -87,16 +87,14 @@ ul.has-suggestions {
   /* TODO */
 }
 ul li {
-  /* TODO */
   text-align: left;
   padding: 5px 0; 
   font-weight: bold;
-  color:antiquewhite;
+  color:rgb(64, 58, 239);
   padding: 10px 20px;
 
 }
 ul li:hover {
-  /* TODO */
   border-radius: 5px;
   padding: 10px;
   opacity: 1;
@@ -107,4 +105,35 @@ ul li:hover {
 
 input {
    /* TODO */
+}
+
+
+@media only screen and (max-width: 600px) {
+  body{
+    margin-top: 10vh;
+  }
+  .search-container {
+    width: 90%;
+
+    }
+    .search-container .suggestions {
+      width: 100%;
+   }
+   ul li:hover {
+    cursor: pointer;
+    background-color: rgb(133, 182, 225);
+    color:rgb(249, 247, 251);
+    padding: 0px 10px;
+  }
+  .search-container input {
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid white;
+   }
+
+   ul li {
+    font-weight:200;
+  }
+   
+
 }
