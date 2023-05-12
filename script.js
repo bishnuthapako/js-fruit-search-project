@@ -1,7 +1,21 @@
 
-const searchBar = document.getElementById("fruit")
-const suggestions = document.querySelector('.suggestions ul');
 const fruit = ['Apple', 'Apricot', 'Avocado 🥑', 'Banana', 'Bilberry', 'Blackberry', 'Blackcurrant', 'Blueberry', 'Boysenberry', 'Currant', 'Cherry', 'Coconut', 'Cranberry', 'Cucumber', 'Custard apple', 'Damson', 'Date', 'Dragonfruit', 'Durian', 'Elderberry', 'Feijoa', 'Fig', 'Gooseberry', 'Grape', 'Raisin', 'Grapefruit', 'Guava', 'Honeyberry', 'Huckleberry', 'Jabuticaba', 'Jackfruit', 'Jambul', 'Juniper berry', 'Kiwifruit', 'Kumquat', 'Lemon', 'Lime', 'Loquat', 'Longan', 'Lychee', 'Mango', 'Mangosteen', 'Marionberry', 'Melon', 'Cantaloupe', 'Honeydew', 'Watermelon', 'Miracle fruit', 'Mulberry', 'Nectarine', 'Nance', 'Olive', 'Orange', 'Clementine', 'Mandarine', 'Tangerine', 'Papaya', 'Passionfruit', 'Peach', 'Pear', 'Persimmon', 'Plantain', 'Plum', 'Pineapple', 'Pomegranate', 'Pomelo', 'Quince', 'Raspberry', 'Salmonberry', 'Rambutan', 'Redcurrant', 'Salak', 'Satsuma', 'Soursop', 'Star fruit', 'Strawberry', 'Tamarillo', 'Tamarind', 'Yuzu'];
+
+
+const suggestions = document.querySelector('.suggestions ul');
+if(suggestions){
+	suggestions.addEventListener('click', useSuggestion);
+}
+
+const searchBar = document.getElementById("fruit")
+if(searchBar){
+	searchBar.addEventListener("keydown", (e)=>{
+		const inputValue = e.target.value;
+	const results = search(inputValue);
+	showSuggestions(results, inputValue)
+	})
+}
+
 
 function search(str) {
 	if(typeof str !== 'string'){
@@ -12,11 +26,11 @@ function search(str) {
 	return results;
 }
 
-function searchHandler(e) {
-	const inputValue = e.target.value;
-	const results = search(inputValue);
-	showSuggestions(results, inputValue)
-}
+// function searchHandler(e) {
+// 	const inputValue = e.target.value;
+// 	const results = search(inputValue);
+// 	showSuggestions(results, inputValue)
+// }
 
 function showSuggestions(results, inputVal) {
 	suggestions.innerHTML = "";
@@ -42,5 +56,17 @@ document.addEventListener("click", (event)=>{
 	}
 });
 
-searchBar.addEventListener("keydown", searchHandler)
-suggestions.addEventListener('click', useSuggestion);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
