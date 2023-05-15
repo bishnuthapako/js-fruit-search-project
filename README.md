@@ -17,8 +17,6 @@ Responsive Design: The search bar and dropdown menu should adapt to different sc
 Cross-Browser Compatibility: Ensure that the search bar works properly on various browsers, such as Google Chrome, Mozilla Firefox, and Microsoft Edge.
 ### Dropdown Menu:
 The search bar will include a dropdown menu containing the list of matching fruits. When a user clicks on a suggestion, it will populate the search bar.
-### Dropdown Menu:
-The search bar and dropdown menu should adapt to different screen sizes and devices.
 ### Cross-Browser Compatibility:
 Ensure that the search bar works properly on various browsers, such as Google Chrome, Mozilla Firefox, and Microsoft Edge.
 ## Getting Started
